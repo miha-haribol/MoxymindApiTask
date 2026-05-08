@@ -1,0 +1,5 @@
+{
+  "BaseUrl": "https://reqres.in",
+  "ApiKey": "",
+  "MaxResponseTimeMs": 1000
+}
