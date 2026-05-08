@@ -1,10 +1,26 @@
-Moxymind API Automation
-Automated test suite for the Reqres API built with .NET 10, RestSharp, and xUnit.
+Moxymind API Automation Framework 
+A professional API testing suite for Reqres.in built with .NET 10, RestSharp, and xUnit.
 
-🚀 Quick Start
-Clone the repository.
+🐳 Quick Start (Docker - Recommended)
+The easiest way to run the tests is using Docker Compose. This ensures a consistent environment regardless of your local setup.
 
-Create settings.json in the Moxymind.Tests folder:
+Set your API Key:
+
+# PowerShell
+$env:API_KEY="your_key_here"
+
+# Linux/macOS/Bash
+export API_KEY="your_key_here"
+
+Run tests:
+
+Bash
+docker-compose up --build --exit-code-from api-tests
+
+💻 Local Execution
+If you prefer running it without Docker, ensure you have the .NET 10 SDK installed.
+
+Create a settings.json in the Moxymind.Tests folder:
 
 JSON
 {
@@ -13,29 +29,23 @@ JSON
   "MaxResponseTimeMs": 1000
 }
 
-Run tests:
+Run command:
 
 Bash
 dotnet test
 
 🛠 Tech Stack
-HTTP Client: RestSharp
+
+Framework: xUnit
+
+HTTP Client: RestSharp (with Newtonsoft.Json)
 
 Assertions: FluentAssertions
 
-JSON: Newtonsoft.Json
+Infrastructure: Docker & GitHub Actions
 
-Test Runner: xUnit
-
-📋 Test Scenarios
-GET /api/users: Validates pagination, data integrity, and JSON schema (types).
-
-POST /api/users: Data-driven user creation using TestData/users.json.
-
-Performance: Validates that response time is within the threshold set in settings.json.
-
-⚙️ Configuration & CI/CD
-All settings can be overridden via Environment Variables for CI/CD integration:
+⚙️ CI/CD & Configuration
+The project is integrated with GitHub Actions. All configuration values can be overridden via Environment Variables:
 
 BASE_URL
 
