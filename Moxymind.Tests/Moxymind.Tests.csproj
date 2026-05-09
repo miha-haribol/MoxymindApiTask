@@ -5,6 +5,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
+
+    <VSTestLogger>trx</VSTestLogger>
+    <VSTestResultsDirectory>./TestResults</VSTestResultsDirectory>
   </PropertyGroup>
 
   <ItemGroup>
