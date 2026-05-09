@@ -7,4 +7,4 @@ services:
       - API_KEY=${API_KEY}
       - MAX_RESPONSE_TIME_MS=1000
     volumes:
-      - ./TestResults:/app/Moxymind.Tests/TestResults
+      - ./TestResults:/app/TestResults

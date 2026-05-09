@@ -6,4 +6,4 @@ COPY . ./
 RUN dotnet restore "Moxymind.Tests/Moxymind.Tests.csproj"
 RUN dotnet build "Moxymind.Tests/Moxymind.Tests.csproj" -c Release --no-restore
 
-ENTRYPOINT ["dotnet", "test", "Moxymind.Tests/Moxymind.Tests.csproj", "-c", "Release", "--no-build", "--verbosity", "detailed"]
+ENTRYPOINT ["dotnet", "test", "Moxymind.Tests/Moxymind.Tests.csproj", "-c", "Release", "--no-build", "--verbosity", "detailed", "--logger", "trx;LogFileName=Moxymind_Report.trx", "--results-directory", "/app/TestResults"]

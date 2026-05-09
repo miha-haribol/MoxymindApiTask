@@ -5,9 +5,6 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
-
-    <VSTestLogger>trx;LogFileName=Moxymind_Report_$([System.DateTime]::Now.ToString("yyyy-MM-dd_HH-mm")).trx</VSTestLogger>
-    <VSTestResultsDirectory>./TestResults</VSTestResultsDirectory>
   </PropertyGroup>
 
   <ItemGroup>
